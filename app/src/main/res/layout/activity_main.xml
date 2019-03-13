@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:orientation="vertical">
+    <HorizontalScrollView android:id="@+id/hsv_mantle" android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:background="@drawable/round_border"/>
+    </HorizontalScrollView>
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_message_bar"
+            android:layout_below="@+id/hsv_mantle"/>
+    <LinearLayout android:id="@+id/ll_message_bar"
+                  android:layout_height="wrap_content" android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_alignParentBottom="true">
+        <EditText android:hint="Message"
+                  android:id="@+id/et_user_message"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_width="fill_parent">
+        </EditText>
+        <Button android:text="Send"
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+</RelativeLayout>
